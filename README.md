@@ -21,10 +21,14 @@ Brief steps to put this system in use:
 1) Register in PubNub and get your publish & subscribe keys
 2) Add the ClickSend block to your PubNub account. then register in ClickSend & input your accoutn details in the pubnub block.
 3) Connect the circuit 
-4) Edit the following in the arduino code : 
+4) Edit the following in the arduino code :
+
         a) Your wifi SSID & Password
+        
         b) Your PubNub's Publish & Subscribe keys
+        
         c) The phone number you want to get alerts on.
+        
 5) Get a web-hosting or install XAMPP. 
 6) Configure MySQL on your server.
 6) Create the MySQL Database using the file 
