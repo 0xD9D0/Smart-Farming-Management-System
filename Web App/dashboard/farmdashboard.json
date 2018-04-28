@@ -1,0 +1,143 @@
+{
+	"version": 1,
+	"allow_edit": false,
+	"plugins": [],
+	"panes": [
+		{
+			"width": 1,
+			"row": {
+				"3": 1,
+				"4": 1
+			},
+			"col": {
+				"3": 3,
+				"4": 3
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "Water Level",
+						"value": "datasources[\"Sensors\"][\"waterlevel\"]",
+						"units": "%",
+						"min_value": 0,
+						"max_value": 100
+					}
+				}
+			]
+		},
+		{
+			"width": 1,
+			"row": {
+				"3": 1,
+				"4": 1
+			},
+			"col": {
+				"3": 2,
+				"4": 1
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "Soil Moisture",
+						"value": "datasources[\"Sensors\"][\"soilmoisture\"]",
+						"units": "%",
+						"min_value": 0,
+						"max_value": 100
+					}
+				}
+			]
+		},
+		{
+			"width": 1,
+			"row": {
+				"3": 1
+			},
+			"col": {
+				"3": 1
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Luminosity",
+						"size": "regular",
+						"value": "datasources[\"Sensors\"][\"lux\"]",
+						"animate": true,
+						"units": "Lux"
+					}
+				}
+			]
+		},
+		{
+			"width": 1,
+			"row": {
+				"3": 5,
+				"4": 1
+			},
+			"col": {
+				"3": 1,
+				"4": 2
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "Humidity sensor",
+						"value": "datasources[\"Sensors\"][\"humidity\"]",
+						"units": "%",
+						"min_value": 0,
+						"max_value": 100
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Temperature",
+						"size": "regular",
+						"value": "datasources[\"Sensors\"][\"temperature\"]",
+						"animate": true,
+						"units": "°C"
+					}
+				}
+			]
+		},
+		{
+			"width": 1,
+			"row": {
+				"3": 9,
+				"4": 11
+			},
+			"col": {
+				"3": 2,
+				"4": 2
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "picture",
+					"settings": {
+						"src": "http://adaptiveanalytics.tk/square.png",
+						"refresh": 0
+					}
+				}
+			]
+		}
+	],
+	"datasources": [
+		{
+			"name": "Sensors",
+			"type": "PubNub",
+			"settings": {
+				"subscribe_key": "sub-c-d17f5088-294f-11e8-86ee-1e8059ef76e6",
+				"channel": "Sensors"
+			}
+		}
+	],
+	"columns": 3
+}

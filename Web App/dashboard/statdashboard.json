@@ -1,0 +1,187 @@
+{
+	"version": 1,
+	"allow_edit": false,
+	"plugins": [],
+	"panes": [
+		{
+			"width": 1,
+			"row": {
+				"3": 1
+			},
+			"col": {
+				"3": 1
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Soli moisture recommendation",
+						"size": "regular",
+						"value": "datasources[\"Sensors\"][\"mo\"]",
+						"animate": true
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Water level recommendation",
+						"size": "regular",
+						"value": "datasources[\"Sensors\"][\"wl\"]",
+						"animate": true
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Food level recommendation",
+						"size": "regular",
+						"value": "datasources[\"Sensors\"][\"fl\"]",
+						"animate": true
+					}
+				}
+			]
+		},
+		{
+			"width": 1,
+			"row": {
+				"3": 1,
+				"4": 1
+			},
+			"col": {
+				"3": 3,
+				"4": 3
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Water Level",
+						"size": "regular",
+						"value": "datasources[\"Sensors\"][\"waterlevel\"]",
+						"sparkline": true,
+						"animate": true,
+						"units": "%"
+					}
+				}
+			]
+		},
+		{
+			"width": 1,
+			"row": {
+				"3": 1,
+				"4": 1
+			},
+			"col": {
+				"3": 2,
+				"4": 1
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Soil Moisture",
+						"size": "regular",
+						"value": "datasources[\"Sensors\"][\"soilmoisture\"]",
+						"sparkline": true,
+						"animate": true,
+						"units": "%"
+					}
+				}
+			]
+		},
+		{
+			"width": 1,
+			"row": {
+				"3": 9
+			},
+			"col": {
+				"3": 1
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Luminosity",
+						"size": "regular",
+						"value": "datasources[\"Sensors\"][\"lux\"]",
+						"sparkline": true,
+						"animate": true,
+						"units": "Lux"
+					}
+				}
+			]
+		},
+		{
+			"width": 1,
+			"row": {
+				"3": 15,
+				"4": 1
+			},
+			"col": {
+				"3": 1,
+				"4": 2
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Humidity sensor",
+						"size": "regular",
+						"value": "datasources[\"Sensors\"][\"humidity\"]",
+						"sparkline": true,
+						"animate": true,
+						"units": "%"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Temperature",
+						"size": "regular",
+						"value": "datasources[\"Sensors\"][\"temperature\"]",
+						"sparkline": true,
+						"animate": true,
+						"units": "°C"
+					}
+				}
+			]
+		},
+		{
+			"width": 1,
+			"row": {
+				"3": 7,
+				"4": 11
+			},
+			"col": {
+				"3": 2,
+				"4": 2
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "picture",
+					"settings": {
+						"src": "http://adaptiveanalytics.tk/square.png",
+						"refresh": 0
+					}
+				}
+			]
+		}
+	],
+	"datasources": [
+		{
+			"name": "Sensors",
+			"type": "PubNub",
+			"settings": {
+				"subscribe_key": "sub-c-d17f5088-294f-11e8-86ee-1e8059ef76e6",
+				"channel": "Sensors"
+			}
+		}
+	],
+	"columns": 3
+}

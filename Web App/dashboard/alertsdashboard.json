@@ -1,0 +1,73 @@
+{
+	"version": 1,
+	"allow_edit": false,
+	"plugins": [],
+	"panes": [
+		{
+			"width": 1,
+			"row": {
+				"3": 1,
+				"4": 1
+			},
+			"col": {
+				"3": 2,
+				"4": 1
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Fire Alarm",
+						"size": "regular",
+						"value": "datasources[\"Sensors\"][\"fire\"]",
+						"sparkline": false,
+						"animate": true,
+						"units": ""
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Gas Alarm",
+						"size": "regular",
+						"value": "datasources[\"Sensors\"][\"gas\"]",
+						"animate": true
+					}
+				}
+			]
+		},
+		{
+			"width": 1,
+			"row": {
+				"3": 7,
+				"4": 11
+			},
+			"col": {
+				"3": 2,
+				"4": 2
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "picture",
+					"settings": {
+						"src": "http://adaptiveanalytics.tk/square.png",
+						"refresh": 0
+					}
+				}
+			]
+		}
+	],
+	"datasources": [
+		{
+			"name": "Sensors",
+			"type": "PubNub",
+			"settings": {
+				"subscribe_key": "sub-c-d17f5088-294f-11e8-86ee-1e8059ef76e6",
+				"channel": "Sensors"
+			}
+		}
+	],
+	"columns": 3
+}
