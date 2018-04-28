@@ -185,7 +185,7 @@ Serial.println("publishing a message");
 void fire(){
   
   String payload = "{";
-  payload += "\"to\":"; payload+="\"00971508743902\""; payload += ",";
+  payload += "\"to\":"; payload+="\"009159494934\""; payload += ",";
     payload += "\"body\":"; payload+="\"FIRE!!\""; payload += "}";
 
   char attributes[100];
@@ -203,7 +203,7 @@ Serial.println("publishing a message");
 void gas(){
   
   String payload = "{";
-  payload += "\"to\":"; payload+="\"00971508743902\""; payload += ",";
+  payload += "\"to\":"; payload+="\"009159494934\""; payload += ",";
     payload += "\"body\":"; payload+="\"GAS LEAKAGE!!\""; payload += "}";
 
   char attributes[100];
